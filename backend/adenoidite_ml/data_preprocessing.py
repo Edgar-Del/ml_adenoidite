@@ -40,7 +40,7 @@ def preprocess_adenoiditis_data(input_path, output_path):
     X_train, X_test, y_train, y_test = train_test_split(
         X_scaled, y, test_size=0.2, random_state=42
     )
-    
+ 
     # Dicionário de saída
     processed_data = {
         'X_train': X_train,

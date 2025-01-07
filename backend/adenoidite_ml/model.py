@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score, silhouette_score, classification_rep
 def train_knn_model(X_train, y_train, X_test, y_test):
     """
     Treinar o classificador KNN para o diagnóstico de adenoidite
-   
+  
     Args:
         X_train (pd.DataFrame): Recursos de Treinamento
         y_train (pd.Series): Etiquetas de treino
@@ -46,7 +46,7 @@ def train_kmeans_model(X_train):
     # Inicializar e treinar K-means
     kmeans = KMeans(n_clusters=2, random_state=42)
     kmeans.fit(X_train)
-    
+   
     # Avaliação do clustering
     silhouette_avg = silhouette_score(X_train, kmeans.labels_)
     print(f"Pontuação: {silhouette_avg}")
