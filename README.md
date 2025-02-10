@@ -25,9 +25,36 @@ source venv/bin/activate  # No Windows, use `venv\Scripts\activate`
 pip install -r requirements.txt
 ```
 
-3. Execute a API:
+3. Treinar o modelo:
 ```bash
-uvicorn main:app --reload
+python -m ml.models.train
+```
+
+4. Rodar a API:
+```bash
+uvicorn app.main:app --reload
+```
+
+## API Endpoints
+
+- GET `/api/v1/predict`: Health check
+- GET `/api/v1/health`: 
+
+## Docker
+
+
+```bash
+docker build -t adenoiditis-ml .
+docker run -p 8000:8000 adenoiditis-ml
+```
+
+## Esturuta do projecto
+
+- `app/`: App FastAPI
+- `ml/`: Código do Agente ML
+- `tests/`: Testes Unitários
+- `data/`: Ficheiros de dados
+- `models/`: Modelos Salvos
 ```
 
 ### Configuração do Frontend
