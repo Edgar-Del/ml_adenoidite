@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from typing import Tuple, Dict
 
-class AdenoiditisPreprocessor:
+class DataPreprocessor:
     def __init__(self):
         self.scaler = StandardScaler()
         self.label_encoders = {}

@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from app.api.models import PediatricAdenoiditisInput, DiagnosisOutput
-from ml.models.predict import predict_pediatric_adenoiditis
+from ml.models.predict import predict_adenoiditis
 from typing import List
 
 router = APIRouter()
@@ -8,7 +8,7 @@ router = APIRouter()
 @router.post("/diagnosticar", response_model=DiagnosisOutput)
 async def diagnose(input_data: PediatricAdenoiditisInput):
     try:
-        diagnosistico, cluster, confianca = predict_pediatric_adenoiditis(input_data.dict())
+        diagnosistico, cluster, confianca = predict_adenoiditis(input_data.dict())
         
         # Gerar recomendações com base na gravidade.
         recommendations = get_recommendations(cluster, confianca)
