@@ -37,8 +37,8 @@ uvicorn app.main:app --reload
 
 ## API Endpoints
 
-- GET `/api/v1/predict`: Health check
-- GET `/api/v1/health`: 
+- POST `/api/v1/diagnosticar`: ENVIAR DADOS PARA TESTAR
+- GET `/api/v1/health`: RECEBER O FEEDBACK "MÉDICO" DO SISTEMA
 
 ## Docker
 
