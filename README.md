@@ -1,4 +1,3 @@
-
 # Diagnóstico de Adenoidite com Machine Learning
 
 ## Visão Geral do Projecto
